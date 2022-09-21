@@ -8,3 +8,4 @@ __pycache__
 notebooks
 KEY*.ipynb
 models
+*.egg-info
