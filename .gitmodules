@@ -1,0 +1,3 @@
+[submodule "pynlp/data/vidgen_extra"]
+	path = pynlp/data/vidgen_extra
+	url = https://github.com/bvidgen/Dynamically-Generated-Hate-Speech-Dataset
