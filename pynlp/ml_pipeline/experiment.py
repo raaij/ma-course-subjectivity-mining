@@ -45,6 +45,8 @@ def run(task_name, data_dir, pipeline_name, print_predictions):
     if print_predictions:
         logger.info('>> predictions')
         utils.print_all_predictions(test_X_ref, test_y, sys_y, logger)
+    
+    return pipe
 
 
 def task(name):
