@@ -33,8 +33,9 @@ def run(task_name, data_dir, pipeline_name, print_predictions):
   
     logger.info('>> training pipeline ' + pipeline_name)
     pipe.fit(train_X, train_y)
-    if pipeline_name == 'naive_bayes_counts_lex':
-        logger.info("   -- Found {} tokens in lexicon".format(pipe.tokens_from_lexicon))
+    ## FIXME: Code below is broken
+    # if pipeline_name == 'naive_bayes_counts_lex':
+    #     logger.info("   -- Found {} tokens in lexicon".format(pipe.tokens_from_lexicon))
 
     logger.info('>> testing...')
     sys_y = pipe.predict(test_X)
@@ -71,7 +72,11 @@ def pipeline(name):
     elif name == 'naive_bayes_tfidf':
         return pipelines.naive_bayes_tfidf()
     elif name == 'naive_bayes_counts_lex':
-        return pipeline_with_lexicon.naive_bayes_counts_lex()
+        # This is copy pasted from Canvas. See:
+        # https://canvas.vu.nl/courses/63973/pages/pipeline-7-use-a-lexicon-for-preprocessing
+        return pipelines.naive_bayes_counts_lex()
+        # TODO: This used to be different before:
+        # return pipeline_with_lexicon.naive_bayes_counts_lex()
     elif name == 'svm_libsvc_counts':
         return pipelines.svm_libsvc_counts()
     elif name == 'svm_libsvc_tfidf':
@@ -82,7 +87,3 @@ def pipeline(name):
         return pipelines.svm_sigmoid_embed()
     else:
         raise ValueError("pipeline name is unknown. You can add a custom pipeline in 'pipelines'")
-
-
-
-

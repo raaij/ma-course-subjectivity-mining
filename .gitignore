@@ -9,3 +9,4 @@ notebooks
 KEY*.ipynb
 models
 *.egg-info
+lexic/*

@@ -59,3 +59,9 @@ def svm_sigmoid_embed():
                                                                                         gamma='scale'))
 
 
+def naive_bayes_counts_lex():
+    # This method is copy pasted from Canvas. See:
+    # https://canvas.vu.nl/courses/63973/pages/pipeline-7-use-a-lexicon-for-preprocessing
+    #
+    # TODO: Why is there also a naive_bayes_counts_lex method in pipeline_with_lexicon ??
+    return pipeline(preprocessing.lex_prep(), representation.count_vectorizer({'min_df': 1}), MultinomialNB())
