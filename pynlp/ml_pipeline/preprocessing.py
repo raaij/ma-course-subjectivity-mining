@@ -105,4 +105,4 @@ def std_prep():
 def lex_prep():
     # This is copy pasted from Canvas. See:
     # https://canvas.vu.nl/courses/63973/pages/pipeline-7-use-a-lexicon-for-preprocessing
-    return Preprocessor(tokenize=True, normalize_tweet=False, lowercase=False, lemmatize=False, lexicon=utils.lexobj2())
+    return Preprocessor(tokenize=True, normalize_tweet=True, lowercase=True, lemmatize=True, lexicon=utils.lexobj2())
