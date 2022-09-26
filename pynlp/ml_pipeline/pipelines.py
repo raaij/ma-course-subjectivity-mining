@@ -65,3 +65,20 @@ def naive_bayes_counts_lex():
     #
     # TODO: Why is there also a naive_bayes_counts_lex method in pipeline_with_lexicon ??
     return pipeline(preprocessing.lex_prep(), representation.count_vectorizer({'min_df': 1}), MultinomialNB())
+
+
+# ------------- added pipelines ---------------------------------
+
+def svm_libsvc_counts_lex():
+    return pipeline(preprocessing.lex_prep(), representation.count_vectorizer(), svm.LinearSVC(max_iter=10000,
+                                                                                               dual=False, C=0.1))
+
+
+def svm_libsvc_tfidf_lex():
+    return pipeline(preprocessing.lex_prep(), representation.tfidf_vectorizer(), svm.LinearSVC(max_iter=10000,
+                                                                                               dual=False, C=0.1))
+
+
+def svm_sigmoid_embed_lex():
+    return pipeline(preprocessing.lex_prep(), representation.text2embeddings('glove'), svm.SVC(kernel='sigmoid',
+                                                                                        gamma='scale'))

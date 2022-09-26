@@ -85,5 +85,11 @@ def pipeline(name):
         return pipelines.svm_libsvc_embed()
     elif name == 'svm_sigmoid_embed':
         return pipelines.svm_sigmoid_embed()
+    elif name == 'svm_libsvc_counts_lex':
+        return pipelines.svm_libsvc_counts_lex()
+    elif name == 'svm_libsvc_tfidf_lex':
+        return pipelines.svm_libsvc_tfidf_lex()
+    elif name == 'svm_sigmoid_embed_lex':
+        return pipelines.svm_sigmoid_embed_lex()
     else:
         raise ValueError("pipeline name is unknown. You can add a custom pipeline in 'pipelines'")
