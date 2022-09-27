@@ -1,0 +1,104 @@
+>> Running experiment for dataset dataset1 representation counts
+>> Running vua_format experiment
+>> Loading data...
+>> retrieving train/data instances...
+>> training pipeline svm_libsvc_counts_lex
+>> testing...
+>> evaluation...
+              precision    recall  f1-score   support
+
+         NOT       0.72      0.78      0.75      1972
+         OFF       0.69      0.62      0.65      1539
+
+    accuracy                           0.71      3511
+   macro avg       0.71      0.70      0.70      3511
+weighted avg       0.71      0.71      0.71      3511
+
+>> Running experiment for dataset dataset1 representation tfidf
+>> Running vua_format experiment
+>> Loading data...
+>> retrieving train/data instances...
+>> training pipeline svm_libsvc_tfidf_lex
+>> testing...
+>> evaluation...
+              precision    recall  f1-score   support
+
+         NOT       0.73      0.79      0.76      1972
+         OFF       0.70      0.63      0.66      1539
+
+    accuracy                           0.72      3511
+   macro avg       0.72      0.71      0.71      3511
+weighted avg       0.72      0.72      0.72      3511
+
+>> Running experiment for dataset dataset1 representation embed
+>> Running vua_format experiment
+>> Loading data...
+>> retrieving train/data instances...
+>> training pipeline svm_sigmoid_embed_lex
+transforming data using customized transformer
+>> testing...
+transforming data using customized transformer
+>> evaluation...
+              precision    recall  f1-score   support
+
+         NOT       0.63      0.64      0.63      1972
+         OFF       0.53      0.52      0.53      1539
+
+    accuracy                           0.59      3511
+   macro avg       0.58      0.58      0.58      3511
+weighted avg       0.59      0.59      0.59      3511
+
+transforming data using customized transformer
+transforming data using customized transformer
+>> Running experiment for dataset dataset2 representation counts
+>> Running vua_format experiment
+>> Loading data...
+>> retrieving train/data instances...
+>> training pipeline svm_libsvc_counts_lex
+>> testing...
+>> evaluation...
+              precision    recall  f1-score   support
+
+         NOT       0.64      0.65      0.64      3824
+         OFF       0.64      0.63      0.64      3807
+
+    accuracy                           0.64      7631
+   macro avg       0.64      0.64      0.64      7631
+weighted avg       0.64      0.64      0.64      7631
+
+>> Running experiment for dataset dataset2 representation tfidf
+>> Running vua_format experiment
+>> Loading data...
+>> retrieving train/data instances...
+>> training pipeline svm_libsvc_tfidf_lex
+>> testing...
+>> evaluation...
+              precision    recall  f1-score   support
+
+         NOT       0.65      0.65      0.65      3824
+         OFF       0.65      0.65      0.65      3807
+
+    accuracy                           0.65      7631
+   macro avg       0.65      0.65      0.65      7631
+weighted avg       0.65      0.65      0.65      7631
+
+>> Running experiment for dataset dataset2 representation embed
+>> Running vua_format experiment
+>> Loading data...
+>> retrieving train/data instances...
+>> training pipeline svm_sigmoid_embed_lex
+transforming data using customized transformer
+>> testing...
+transforming data using customized transformer
+>> evaluation...
+              precision    recall  f1-score   support
+
+         NOT       0.55      0.55      0.55      3824
+         OFF       0.55      0.55      0.55      3807
+
+    accuracy                           0.55      7631
+   macro avg       0.55      0.55      0.55      7631
+weighted avg       0.55      0.55      0.55      7631
+
+transforming data using customized transformer
+transforming data using customized transformer
