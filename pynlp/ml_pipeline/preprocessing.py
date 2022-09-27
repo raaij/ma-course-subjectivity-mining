@@ -87,7 +87,18 @@ def lemmatize_with_spacy(data):
     nlp = spacy.load("en_core_web_sm")
 
     def apply_spacy(tw):
-        return ' '.join([token.lemma_ for token in nlp(tw)])
+        res = []
+        for token in nlp(tw):
+            # By default SpaCy lemmatizes pronouns to -PRON-, this undos that
+            # https://stackoverflow.com/a/56983110
+            if token.lemma_ == '-PRON-':
+                token.lemma_ = token.orth_
+                token.lemma = token.orth
+            
+            res.append(token.lemma_)
+        
+        return ' '.join(res)
+
     return [apply_spacy(tweet) for tweet in data]
 
 
