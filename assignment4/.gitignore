@@ -1,1 +1,10 @@
 data/*
+*.zip
+*.svg
+model_outputs/*
+outputs/*
+runs/*
+tmp/*
+cache_dir/*
+.ipynb_checkpoints/*
+*:Zone.Identifier
